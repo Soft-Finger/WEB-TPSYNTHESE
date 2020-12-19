@@ -1,0 +1,14 @@
+body {
+    background: #dedede;
+}
+.page-wrap {
+    min-height: 100vh;
+}
+
+.main{
+    background-color:floralwhite
+}
+
+h1{
+    height: 50px;
+}

@@ -1,0 +1,40 @@
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand">
+                <i class="fab fa-angular danger fa-2x "></i><span class=" font-weight-bold text-uppercase text-white">TpSynthese</span>
+            </a>
+            <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button> 
+        </div>
+        <div id="my-nav" class="collapse navbar-collapse justify-content-end">
+            <ul class="navbar-nav mr-auto align-self-end">
+                <li class="nav-item">
+                    <a class="nav-link font-weight-bold text-uppercase text-white" routerLink = "home">home</a>
+                </li>
+                <div class="dropdown">
+                    <button id="my-dropdown" class="btn btn-primary dropdown-toggle font-weight-bold text-uppercase text-white" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">tutoriel</button>
+                    <div class="dropdown-menu" aria-labelledby="my-dropdown">
+                        <a class="dropdown-item active font-weight-bold text-uppercase text-white" [routerLink] = "['/tutoriel', 1]">Mini tutoriel Angular 10</a>
+                        <a class="dropdown-item active font-weight-bold text-uppercase text-white" [routerLink] = "['/tutoriel', 2]">Mini tutoriel Crud</a>
+                        <a class="dropdown-item active font-weight-bold text-uppercase text-white" [routerLink] = "['/tutoriel', 3]">Mini tutoriel des relation</a>
+                        <a class="dropdown-item active font-weight-bold text-uppercase text-white" [routerLink] = "['/tutoriel', 4]">Mini tutoriel Structure Angular</a>
+                    </div>
+                </div>
+                <li class="nav-item">
+                    <a class="nav-link font-weight-bold text-uppercase text-white" [routerLink] = "['/formulaire']">formulaire</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link font-weight-bold text-uppercase text-white" routerLink = "crud">crud</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link font-weight-bold text-uppercase text-white" routerLink = "fun">fun</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link font-weight-bold text-uppercase text-white" routerLink = "contact">contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>

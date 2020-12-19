@@ -1,0 +1,126 @@
+<body style="padding-top:70px; padding-bottom: 70px;">
+    <main class="container-fluid mb-4" >
+        <section class="row my-4">
+           <!--Begin Breadcrumb-->
+           <nav class="col-12">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a [routerLink] = "['/home']" >Accueil</a></li>
+                    <li class="breadcrumb-item"><a [routerLink] = "['/contact']">contact</a></li>
+                </ol>
+           </nav>
+           <!--End Breadcrumb .col-12-->
+           <section class="col-12 col-md-6 mb-3">
+               <div class="alert alert-warning alert-dismissible show fade">
+                   <p class="h4 alert-heading">Attention !</p>
+                   <p>Ce site est un site expérimental</p>
+                   <button type="button" class="close" data-dismiss="alert">
+                     <span>&times;</span>
+                   </button>
+               </div>
+               <h1 class="h3">Nous contacter</h1>
+               <p>Ce petit blog est un blog test sur un petit tuto angular. Si vous avez des suggestion ou des compléments n'hésitez pas à ne pas nous contactez</p>
+               <!--Begin Accordion-->
+               <div class="d-flex flex-column" id="accordion">
+                   <button class="btn btn-primary text-left" data-toggle="collapse" data-target="#accordion1">Accordéon 1: Cliquez-moi</button>
+                   <section id="accordion1" class="collapse show border p-3" data-parent="#accordion">
+                       Nous maintenons vos informations confidentielles. Le respect de la vide privée et de la confidentialité est notre leitmotiv. 
+                   </section>
+                   <button class="btn btn-primary text-left" data-toggle="collapse" data-target="#accordion2">Accordéon 2: Cliquez-moi</button>
+                   <section id="accordion2" class="collapse border p-3" data-parent="#accordion">
+                    Lorsque vous utilisez nos services, vous nous confiez vos données personnelles. Nous comprenons que c'est une grande responsabilité et nous faisons tout notre possible pour protéger vos renseignements et pour vous permettre de les gérer.</section>
+               </div>
+               <!--End Accordion-->
+           </section><!--End First Column (accordion)-->
+           <div class="col-12 col-md-6">
+             
+               <form [formGroup] = "userForm2" (ngSubmit) = "onSubmit()" >
+                   <div *ngIf="validMessage != ''">
+                       <h3 class="has-info"> {{ validMessage }} </h3>
+                   </div>
+                  <h1 class="h3">Formulaire de soumission</h1>
+                  <fieldset>
+                     <legend>Informations personnelles</legend>
+
+                       <div class="form-group">
+                           <label for="fName" class="d-none d-md-block">Votre prénom</label>
+                           <input type="text"  class="form-control" formControlName ="fName" id="fName" placeholder="Votre prénom"/>
+
+                            <div *ngIf = "!form2.fName.valid && (form2.fName.dirty)" >
+                                <div [hidden] = "!form2.fName.errors.required" >Le nom est obligatoire</div>
+                                <div [hidden] = "!form2.fName.errors.minlength" >Minimum 8 caractères</div>
+                            </div>
+
+                       </div>
+
+                       <div class="form-group">
+                           <label for="lName" class="d-none d-md-block">Votre nom de famille</label>
+                           <input type="text" class="form-control" formControlName="lName" id="lName" placeholder="Votre nom de famille" />
+                       </div>
+                       <!--End LastName field-->
+                       <!--email field-->
+                       <div class="form-group">
+                           <label for="email" class="d-none d-md-block">Votre adresse email</label>
+                           <input type="mail" class="form-control" formControlName="email" id="email" placeholder="Votre adresse email" />
+                           <small class="form-text text-muted">Nous ne partagerons pas votre adresse mail avec des tiers.</small>
+                       </div>
+                       <!--End email field-->
+                       <!--Country field-->
+                       <div class="form-group">
+                           <label for="country" class="d-none d-md-block">Votre pays</label>
+                           <select class="form-control" formControlName="country" id="country">
+                               <option value="0">--Choisissez un pays---</option>
+                               <option value="CA">Canada</option>
+                               <option value="BE">Belgique</option>
+                               <option value="FR">France</option>
+                               <option value="CH">Suisse</option>
+                           </select>
+                       </div>
+                       <!--End Country field-->
+                  </fieldset>
+                  <fieldset>
+                      <legend>Vos Préférences</legend>
+                      <!--Newsletter-->
+                      <div class="form-group">
+                          <p class="h6">Désirez-vous vous inscrire à notre Newsletter ?</p>
+                          <div class="form-check form-check-inline">
+                              <label class="form-check-label"><input type="radio" formControlName="newsletter" value="true" checked class="form-check-input" />Oui</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                              <label class="form-check-label"><input type="radio" formControlName="newsletter" value="false" class="form-check-input" />Non</label>
+                          </div>
+                      </div>
+                      <!--End Newsletter-->
+                      
+                      <div class="form-group">
+                          <p class="h6">Comment avez-vous entendu parler de nous ? <span class="text-muted">(Pusieurs réponses possibles)</span></p>
+                          <div class="form-check form-check-inline">
+                              <label class="form-check-label"><input type="checkbox" formControlName = "how" value="social" class="form-check-input" />Réseaux Sociaux</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                              <label class="form-check-label"><input type="checkbox" formControlName = "how" value="ad" class="form-check-input" />Publicité</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                              <label class="form-check-label"><input type="checkbox" formControlName = "how" value="mtw" class="form-check-input" />Bouche à oreille</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                              <label class="form-check-label"><input type="checkbox" formControlName = "how" value="catalog" class="form-check-input" />Catalogue</label>
+                          </div>
+                      </div>
+                      
+                  </fieldset>
+                  <fieldset>
+                      <legend>Votre message</legend>
+                      
+                      <div class="form-group">
+                          <label for="message" class="d-none d-md-block">Votre Message</label>
+                          <textarea formControlName = "message" id="message" rows="5" class="form-control"></textarea>
+                      </div>
+                      
+                  </fieldset>
+                  
+                  <button class="btn btn-primary">Envoyer !</button>
+               </form>
+           </div>
+        </section>
+    </main>
+  </body>

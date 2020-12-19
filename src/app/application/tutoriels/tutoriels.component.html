@@ -1,0 +1,596 @@
+
+<h2>L'id récupéré est : {{myParametre}}</h2>
+<!--====================================================================================================-->
+<ng-container *ngIf="myParametre == 1; then angular10; else " >
+</ng-container>
+
+<ng-template #angular10>
+    <h1 class="text-uppercase text-danger font-weight-bold text-center mt-4">notion sur angular 10</h1>
+    <body style="padding-top:70px; padding-bottom: 70px;">
+        <main class="container-fluid mb-4" >
+            <section class="row my-4">
+                <div class="col-12 col-md-9">
+                  <!--Begin Breadcrumb-->
+                   <nav>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a [routerLink]="['/home']">Accueil</a></li>
+                            <li class="breadcrumb-item"><a [routerLink]="['/contact']">contact</a></li>
+                        </ol>
+                   </nav>
+                   <!--End Breadcrumb-->
+                   <!--Begin Top pagination-->
+                    <nav>
+                       <ul class="pagination justify-content-center">
+                        <li class="page-item disabled"><a href="#" class="page-link">&laquo;</a></li>
+                        <li class="page-item active"><a href="#" class="page-link">1</a></li>
+                        <li class="page-item"><a href="#" class="page-link">2</a></li>
+                        <li class="page-item"><a href="#" class="page-link">3</a></li>
+                        <li class="page-item"><a href="#" class="page-link">&raquo;</a></li>
+                       </ul>
+                    </nav>
+                    <!--End Top pagination-->
+                    <div class="list-group list-group-flush mb-3">
+                        <article class="list-group-item list-group-item-action">
+                           <div class="row">
+                               <div class="col12 col-md-4">
+                                   <img src="assets/images/ang1.png" class="img-fluid img-thumbnail" alt="angular 1">
+                               </div>
+                               <div class="col12 col-md-8">
+                                   <h1 class="h3">Introduction angular 10.</h1>
+                                    <p>Angular est une plateforme de développement qui permet de créer des applications web dynamiques et immersives.  Dans ce cours, vous apprendrez rapidement à créer les composantes de base d'une application Angular, avant d'enrichir vos applications en approfondissant vos connaissances de ce framework.  Vous apprendrez également à faire communiquer votre application avec un backend afin de créer une application web complète.</p>
+                                    <a class="btn btn-primary" href="blogPost.html">En savoir plus</a>
+                               </div><!---End second column of Article-->
+                           </div>
+                        </article><!--end article.list-group-item-->
+                        <article class="list-group-item list-group-item-action">
+                           <div class="row">
+                               <div class="col12 col-md-4">
+                                   <img src="assets/images/ang2.png" class="img-fluid img-thumbnail" alt="angular 2">
+                               </div>
+                               <div class="col12 col-md-8">
+                                   <h1 class="h3">Property Binding</h1>
+                                    <p>L'intérêt d'utiliser Angular est de pouvoir gérer le DOM (Document Object Model : les éléments HTML affichés par le navigateur) de manière dynamique, et pour cela, il faut utiliser la liaison de données, ou "databinding".
+
+                                        Le databinding, c'est la communication entre votre code TypeScript et le template HTML qui est montré à l'utilisateur.  Cette communication est divisée en deux directions :
+                                        
+                                        les informations venant de votre code qui doivent être affichées dans le navigateur, comme par exemple des informations que votre code a calculé ou récupéré sur un serveur.  Les deux principales méthodes pour cela sont le "string interpolation" et le "property binding" ;
+                                        
+                                        les informations venant du template qui doivent être gérées par le code : l'utilisateur a rempli un formulaire ou cliqué sur un bouton, et il faut réagir et gérer ces événements.  On parlera de "event binding" pour cela.
+                                        
+                                        Il existe également des situations comme les formulaires, par exemple, où l'on voudra une communication à double sens : on parle donc de "two-way binding".Property binding
+                                        La liaison par propriété ou "property binding" est une autre façon de créer de la communication dynamique entre votre TypeScript et votre template : plutôt qu'afficher simplement le contenu d'une variable, vous pouvez modifier dynamiquement les propriétés d'un élément du DOM en fonction de données dans votre TypeScript.</p>
+                                    <a class="btn btn-primary" href="blogPost.html">En savoir plus</a>
+                               </div><!---End second column of Article-->
+                           </div>
+                        </article><!--end article.list-group-item-->
+                        <article class="list-group-item list-group-item-action">
+                           <div class="row">
+                               <div class="col12 col-md-4">
+                                   <img src="assets/images/ang3.jpg" class="img-fluid img-thumbnail" alt="angular 3">
+                               </div>
+                               <div class="col12 col-md-8">
+                                   <h1 class="h3">Evolution de Angular </h1>
+                                    <p> Développé par Google, Angular est un Framework open source écrit en JavaScript qui permet la création d’applications Web et plus particulièrement de ce qu’on appelle des  « Single Page Applications » : des applications web accessibles via une page web unique qui permet de fluidifier l’expérience utilisateur et d’éviter les chargements de pages à chaque nouvelle action. Le Framework est basé sur une architecture du type MVC[réf. nécessaire] et permet donc de séparer les données, le visuel et les actions pour une meilleure gestion des responsabilités. Un type d’architecture qui a largement fait ses preuves et qui permet une forte maintenabilité et une amélioration du travail collaboratif.</p>
+                                    <a class="btn btn-primary" href="">En savoir plus</a>
+                               </div><!---End second column of Article-->
+                           </div>
+                        </article><!--end article.list-group-item-->
+                        <article class="list-group-item list-group-item-action">
+                           <div class="row">
+                               <div class="col12 col-md-4">
+                                   <img src="assets/images/angBg.jpg" class="img-fluid img-thumbnail" alt="image angular">
+                               </div>
+                               <div class="col12 col-md-8">
+                                   <h1 class="h3">Angular version 2</h1>
+                                    <p>Angular (communément appelé "Angular 2+" ou "Angular v2 et plus")2,3 est donc un cadriciel (framework) côté client, open source, basé sur TypeScript, et co-dirigé par l'équipe du projet « Angular » à Google et par une communauté de particuliers et de sociétés. Angular est une réécriture complète de AngularJS, cadriciel construit par la même équipe.</p>
+                                    <a class="btn btn-primary" href="">En savoir plus</a>
+                               </div><!---End second column of Article-->
+                           </div>
+                        </article><!--end article.list-group-item-->
+                        <article class="list-group-item list-group-item-action">
+                           <div class="row">
+                               <div class="col12 col-md-4">
+                                   <img src="assets/images/coding.jpg" class="img-fluid img-thumbnail" alt="Soirée">
+                               </div>
+                               <div class="col12 col-md-8">
+                                   <h1 class="h3">Angular et Angular JS</h1>
+                                    <p>Angular n'a pas de notion de "portée" ou de contrôleurs, au lieu de cela il utilise une hiérarchie de composants comme principale caractéristique architecturale4.
+                                        Angular a une syntaxe d'expression différente, en se concentrant sur les "[ ]" pour la liaison des propriétés, et de "( )" pour les liaisons des événements5
+                                        Modularité – beaucoup de fonctionnalités de base ont été déplacées vers des modules
+                                        Angular recommande l'utilisation du langage TypeScript, créé par Microsoft, qui présente les caractéristiques suivantes:
+                                        le principe de classe, à la base de la Programmation Orientée Objet
+                                        le typage statique
+                                        les génériques
+                                        TypeScript est un sur-ensemble d'ECMAScript 6 (ES6), et est rétro-compatible avec ECMAScript 5 (c'est-à-dire: JavaScript). Angular comprend également les principes d'ES6 suivant :
+                                        les fonctions anonymes
+                                        les itérateurs
+                                        boucles for-of
+                                        générateurs dans le style du langage Python
+                                        La réflexion
+                                        Le chargement dynamique
+                                        Compilation asynchrone des modèles
+                                        Itératif rappels fournis par RxJS. RxJS limites de l'état de visibilité et de débogage, mais ces problèmes peuvent être résolus avec réactif add-ons comme ngReact ou ngrx.</p>
+                                    <a class="btn btn-primary" href="blogPost.html">En savoir plus</a>
+                               </div><!---End second column of Article-->
+                           </div>
+                        </article><!--end article.list-group-item-->
+                    </div><!--End div.list-group-->
+                    <!--Begin Bottom pagination-->
+                    <nav>
+                       <ul class="pagination justify-content-center">
+                        <li class="page-item disabled"><a href="#" class="page-link">&laquo;</a></li>
+                        <li class="page-item active"><a href="#" class="page-link">1</a></li>
+                        <li class="page-item"><a href="#" class="page-link">2</a></li>
+                        <li class="page-item"><a href="#" class="page-link">3</a></li>
+                        <li class="page-item"><a href="#" class="page-link">&raquo;</a></li>
+                       </ul>
+                    </nav>
+                    <!--End Bottom pagination-->
+                </div><!--End first column-->
+                <div class="col-12 col-md-3">
+                    <section class="card">
+                        <div class="card-header bg-primary text-white">
+                            <h1 class="h5">Catégories</h1>
+                        </div><!--end .card-header-->
+                        <ul class="list-group">
+                            <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"><a href="#">Catégorie 1</a><span class="badge badge-pill badge-primary">2</span></li>
+                            <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"><a href="#">Catégorie 2</a><span class="badge badge-pill badge-primary">10</span></li>
+                            <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"><a href="#">Catégorie 3</a><span class="badge badge-pill badge-primary">6</span></li>
+                            <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"><a href="#">Catégorie 4</a><span class="badge badge-pill badge-primary">8</span></li>
+                            <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"><a href="#">Catégorie 5</a><span class="badge badge-pill badge-primary">23</span></li>
+                        </ul>
+                    </section><!--end Category section-->
+                </div><!--End second column-->
+            </section><!--end section.row-->
+        </main><!--end main.container-fluid-->
+       
+       
+     </body>
+</ng-template>
+<!--====================================================================================================-->
+
+
+<!--====================================================================================================-->
+
+<ng-container *ngIf="myParametre == 2; then crud; else " >
+</ng-container>
+
+<ng-template #crud>
+    <div>
+        <h1 class="text-uppercase text-danger font-weight-bold text-center mt-3">notion de crud</h1>
+        <body style="padding-top:70px; padding-bottom: 70px;">
+            <main class="container-fluid mb-4" >
+                <section class="row my-4">
+                    <div class="col-12 col-md-9">
+                      <!--Begin Breadcrumb-->
+                       <nav>
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a [routerLink]="['/home']">Accueil</a></li>
+                                <li class="breadcrumb-item"><a [routerLink]="['/contact']">contact</a></li>
+                            </ol>
+                       </nav>
+                       <!--End Breadcrumb-->
+                       <!--Begin Top pagination-->
+                        <nav>
+                           <ul class="pagination justify-content-center">
+                            <li class="page-item disabled"><a href="#" class="page-link">&laquo;</a></li>
+                            <li class="page-item active"><a href="#" class="page-link">1</a></li>
+                            <li class="page-item"><a href="#" class="page-link">2</a></li>
+                            <li class="page-item"><a href="#" class="page-link">3</a></li>
+                            <li class="page-item"><a href="#" class="page-link">&raquo;</a></li>
+                           </ul>
+                        </nav>
+                        <!--End Top pagination-->
+                        <div class="list-group list-group-flush mb-3">
+                            <article class="list-group-item list-group-item-action">
+                               <div class="row">
+                                   <div class="col12 col-md-4">
+                                       <img src="/assets/images/crud5.png" class="img-fluid img-thumbnail" alt="">
+                                   </div>
+                                   <div class="col12 col-md-8">
+                                       <h1 class="h3">Notion de base</h1>
+                                        <p>L'acronyme informatique anglais CRUD (pour create, read, update, delete) (parfois appelé SCRUD avec un "S" pour search) désigne les quatre opérations de base pour la persistance des données, en particulier le stockage d'informations en base de données.
+
+                                            Soit :
+                                            
+                                            create : créer
+                                            read : lire
+                                            update : mettre à jour
+                                            delete : supprimer
+                                            Plus généralement, il désigne les opérations permettant la gestion d'une collection d'éléments.
+                                            
+                                            Ce terme est aussi un jeu de mot en anglais sur l'adjectif crude (en français brut ou rudimentaire).</p>
+                                        <a class="btn btn-primary" href="">En savoir plus</a>
+                                   </div><!---End second column of Article-->
+                               </div>
+                            </article><!--end article.list-group-item-->
+                            <article class="list-group-item list-group-item-action">
+                               <div class="row">
+                                   <div class="col12 col-md-4">
+                                       <img src="/assets/images/crud4.png" class="img-fluid img-thumbnail" alt="">
+                                   </div>
+                                   <div class="col12 col-md-8">
+                                       <h1 class="h3">CRUD et base de données</h1>
+                                        <p>L'acronyme CRUD se réfère à la majorité des opérations implémentées dans les bases de données relationnelles. Chaque composante de l'acronyme peut être associée à un type de requête en SQL ainsi qu'à une méthode HTTP.</p>
+                                        <a class="btn btn-primary" href="blogPost.html">En savoir plus</a>
+                                   </div><!---End second column of Article-->
+                               </div>
+                            </article><!--end article.list-group-item-->
+                            <article class="list-group-item list-group-item-action">
+                               <div class="row">
+                                   <div class="col12 col-md-4">
+                                       <img src="/assets/images/crud3.png" class="img-fluid img-thumbnail" alt="">
+                                   </div>
+                                   <div class="col12 col-md-8">
+                                       <h1 class="h3">CRUD et serveur</h1>
+                                        <p>Dans presque toutes les applications avec lesquelles nous travaillons, la première chose importante à faire est de gérer les données, les charges et les charges de données. Et ces données qui résident sur le serveur sont traitées par l'utilisation d'opérations HTTP. Nous effectuons des opérations HTTP GET et POST pour travailler avec ces données.
+                                            Désormais, dans une application réelle, ces données sont stockées sur le serveur et reçues via l'API. Cependant, à des fins de test, au lieu d'utiliser un vrai serveur, nous pouvons en fait simuler le serveur principal.</p>
+                                        <a class="btn btn-primary" href="">En savoir plus</a>
+                                   </div><!---End second column of Article-->
+                               </div>
+                            </article><!--end article.list-group-item-->
+                            <article class="list-group-item list-group-item-action">
+                               <div class="row">
+                                   <div class="col12 col-md-4">
+                                       <img src="/assets/images/crud2.png" class="img-fluid img-thumbnail" alt="">
+                                   </div>
+                                   <div class="col12 col-md-8">
+                                       <h1 class="h3">CRUD operations</h1>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae repellat, id soluta fugit exercitationem accusamus perspiciatis sit iste aliquam quam quidem sunt earum. Esse rem illum, deleniti laborum cumque? Totam, ex. Facilis perferendis consequuntur veniam ratione, voluptas, dolorum sit. Ea beatae cumque illo numquam aliquam quisquam nostrum dolores, voluptate sequi placeat quasi eveniet alias recusandae modi. Commodi placeat beatae minus.</p>
+                                        <a class="btn btn-primary" href="">En savoir plus</a>
+                                   </div><!---End second column of Article-->
+                               </div>
+                            </article><!--end article.list-group-item-->
+                            <article class="list-group-item list-group-item-action">
+                               <div class="row">
+                                   <div class="col12 col-md-4">
+                                       <img src="/assets/images/crud1.png" class="img-fluid img-thumbnail" alt="">
+                                   </div>
+                                   <div class="col12 col-md-8">
+                                       <h1 class="h3">Gestion du CRUD</h1>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae repellat, id soluta fugit exercitationem accusamus perspiciatis sit iste aliquam quam quidem sunt earum. Esse rem illum, deleniti laborum cumque? Totam, ex. Facilis perferendis consequuntur veniam ratione, voluptas, dolorum sit. Ea beatae cumque illo numquam aliquam quisquam nostrum dolores, voluptate sequi placeat quasi eveniet alias recusandae modi. Commodi placeat beatae minus.</p>
+                                        <a class="btn btn-primary" href="">En savoir plus</a>
+                                   </div><!---End second column of Article-->
+                               </div>
+                            </article><!--end article.list-group-item-->
+                        </div><!--End div.list-group-->
+                        <!--Begin Bottom pagination-->
+                        <nav>
+                           <ul class="pagination justify-content-center">
+                            <li class="page-item disabled"><a href="#" class="page-link">&laquo;</a></li>
+                            <li class="page-item active"><a href="#" class="page-link">1</a></li>
+                            <li class="page-item"><a href="#" class="page-link">2</a></li>
+                            <li class="page-item"><a href="#" class="page-link">3</a></li>
+                            <li class="page-item"><a href="#" class="page-link">&raquo;</a></li>
+                           </ul>
+                        </nav>
+                        <!--End Bottom pagination-->
+                    </div><!--End first column-->
+                    <div class="col-12 col-md-3">
+                        <section class="card">
+                            <div class="card-header bg-primary text-white">
+                                <h1 class="h5">Catégories</h1>
+                            </div><!--end .card-header-->
+                            <ul class="list-group">
+                                <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"><a href="#">Catégorie 1</a><span class="badge badge-pill badge-primary">2</span></li>
+                                <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"><a href="#">Catégorie 2</a><span class="badge badge-pill badge-primary">10</span></li>
+                                <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"><a href="#">Catégorie 3</a><span class="badge badge-pill badge-primary">6</span></li>
+                                <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"><a href="#">Catégorie 4</a><span class="badge badge-pill badge-primary">8</span></li>
+                                <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"><a href="#">Catégorie 5</a><span class="badge badge-pill badge-primary">23</span></li>
+                            </ul>
+                        </section><!--end Category section-->
+                    </div><!--End second column-->
+                </section><!--end section.row-->
+            </main><!--end main.container-fluid-->
+           
+           
+         </body> 
+    </div>
+</ng-template>
+
+<!--====================================================================================================-->
+<ng-container *ngIf="myParametre == 3; then relations; else " >
+</ng-container>
+
+<ng-template #relations>
+    <div>
+        <h1 class="text-uppercase text-danger font-weight-bold text-center mt-4">notion sur les relations</h1>
+        <body style="padding-top:70px; padding-bottom: 70px;">
+            <main class="container-fluid mb-4" >
+                <section class="row my-4">
+                    <div class="col-12 col-md-9">
+                      <!--Begin Breadcrumb-->
+                       <nav>
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a [routerLink]="['/home']">Accueil</a></li>
+                                <li class="breadcrumb-item"><a [routerLink]="['/contact']">contact</a></li>
+                            </ol>
+                       </nav>
+                       <!--End Breadcrumb-->
+                       <!--Begin Top pagination-->
+                        <nav>
+                           <ul class="pagination justify-content-center">
+                            <li class="page-item disabled"><a href="#" class="page-link">&laquo;</a></li>
+                            <li class="page-item active"><a href="#" class="page-link">1</a></li>
+                            <li class="page-item"><a href="#" class="page-link">2</a></li>
+                            <li class="page-item"><a href="#" class="page-link">3</a></li>
+                            <li class="page-item"><a href="#" class="page-link">&raquo;</a></li>
+                           </ul>
+                        </nav>
+                        <!--End Top pagination-->
+                        <div class="list-group list-group-flush mb-3">
+                            <article class="list-group-item list-group-item-action">
+                               <div class="row">
+                                   <div class="col12 col-md-4">
+                                       <img src="/assets/images/architecture.png" class="img-fluid img-thumbnail" alt="">
+                                   </div>
+                                   <div class="col12 col-md-8">
+                                       <h1 class="h3">Modèles, directives et liaison de données</h1>
+                                        <p>
+                                            Un modèle combine du HTML avec un balisage angulaire qui peut modifier les éléments HTML avant qu'ils ne soient affichés. Les directives de modèle fournissent la logique du programme et le balisage de liaison connecte vos données d'application et le DOM. Il existe deux types de liaison de données:
+                                            
+                                            La liaison d'événement permet à votre application de répondre aux entrées de l'utilisateur dans l'environnement cible en mettant à jour les données de votre application.
+                                            La liaison de propriété vous permet d'interpoler les valeurs calculées à partir des données de votre application dans le HTML.
+                                            Avant qu'une vue soit affichée, Angular évalue les directives et résout la syntaxe de liaison dans le modèle pour modifier les éléments HTML et le DOM, en fonction des données et de la logique de votre programme. Angular prend en charge la liaison de données bidirectionnelle , ce qui signifie que les changements dans le DOM, tels que les choix de l'utilisateur, sont également reflétés dans les données de votre programme.
+                                            
+                                            Vos modèles peuvent utiliser des canaux pour améliorer l'expérience utilisateur en transformant les valeurs pour l'affichage. Par exemple, utilisez des canaux pour afficher les dates et les valeurs monétaires adaptées aux paramètres régionaux d'un utilisateur. Angular fournit des tuyaux prédéfinis pour les transformations courantes, et vous pouvez également définir vos propres tuyaux.</p>
+                                        <a class="btn btn-primary" href="blogPost.html">En savoir plus</a>
+                                   </div><!---End second column of Article-->
+                               </div>
+                            </article><!--end article.list-group-item-->
+                            <article class="list-group-item list-group-item-action">
+                               <div class="row">
+                                   <div class="col12 col-md-4">
+                                       <img src="/assets/images/architecture.png" class="img-fluid img-thumbnail" alt="">
+                                   </div>
+                                   <div class="col12 col-md-8">
+                                       <h1 class="h3">Routage</h1>
+                                        <p>Routage
+                                            Angular RouterNgModule fournit un service qui vous permet de définir un chemin de navigation entre les différents états d'application et d'afficher les hiérarchies dans votre application. Il est calqué sur les conventions de navigation habituelles du navigateur:
+                                            
+                                            Entrez une URL dans la barre d'adresse et le navigateur accède à une page correspondante.
+                                            
+                                            Cliquez sur les liens de la page et le navigateur accède à une nouvelle page.
+                                            
+                                            Cliquez sur les boutons Précédent et Suivant du navigateur et le navigateur navigue en arrière et en avant dans l'historique des pages que vous avez vues.
+                                            
+                                            Le routeur mappe des chemins de type URL vers des vues au lieu de pages. Lorsqu'un utilisateur effectue une action, telle que cliquer sur un lien, qui chargerait une nouvelle page dans le navigateur, le routeur intercepte le comportement du navigateur et affiche ou masque les hiérarchies de vues.
+                                            
+                                            Si le routeur détermine que l'état actuel de l'application nécessite une fonctionnalité particulière et que le module qui la définit n'a pas été chargé, le routeur peut charger le module paresseux à la demande.
+                                            
+                                            Le routeur interprète une URL de lien en fonction des règles de navigation et de l'état des données de votre application. Vous pouvez accéder à de nouvelles vues lorsque l'utilisateur clique sur un bouton ou effectue une sélection dans une boîte de dépôt, ou en réponse à un autre stimulus provenant de n'importe quelle source. Le routeur enregistre l'activité dans l'historique du navigateur, de sorte que les boutons Précédent et Suivant fonctionnent également.
+                                            
+                                            Pour définir des règles de navigation, vous associez des chemins de navigation à vos composants. Un chemin utilise une syntaxe de type URL qui intègre vos données de programme, de la même manière que la syntaxe de modèle intègre vos vues avec vos données de programme. Vous pouvez ensuite appliquer la logique du programme pour choisir les vues à afficher ou à masquer, en réponse à l'entrée de l'utilisateur et à vos propres règles d'accès.</p>
+                                        <a class="btn btn-primary" href="blogPost.html">En savoir plus</a>
+                                   </div><!---End second column of Article-->
+                               </div>
+                            </article><!--end article.list-group-item-->
+                            <article class="list-group-item list-group-item-action">
+                               <div class="row">
+                                   <div class="col12 col-md-4">
+                                       <img src="/assets/images/architecture.png" class="img-fluid img-thumbnail" alt="Chalet">
+                                   </div>
+                                   <div class="col12 col-md-8">
+                                       <h1 class="h3">Injection de dépendance en angulaire</h1>
+                                        <p>Injection de dépendance en angulaire
+                                            Les dépendances sont des services ou des objets dont une classe a besoin pour exécuter sa fonction. L'injection de dépendances, ou DI, est un modèle de conception dans lequel une classe demande des dépendances à des sources externes plutôt que de les créer.
+                                            
+                                            Le cadre DI d'Angular fournit des dépendances à une classe lors de l'instanciation. Vous pouvez utiliser Angular DI pour augmenter la flexibilité et la modularité de vos applications.</p>
+                                        <a class="btn btn-primary" href="blogPost.html">En savoir plus</a>
+                                   </div><!---End second column of Article-->
+                               </div>
+                            </article><!--end article.list-group-item-->
+                            <article class="list-group-item list-group-item-action">
+                               <div class="row">
+                                   <div class="col12 col-md-4">
+                                       <img src="/assets/images/architecture.png" class="img-fluid img-thumbnail" alt="">
+                                   </div>
+                                   <div class="col12 col-md-8">
+                                       <h1 class="h3">Injection de dependance</h1>
+                                        <p>Le décorateur spécifie qu'Angular peut utiliser cette classe dans le système DI. Les métadonnées, signifie que le est visible dans toute l'application.@Injectable()providedIn: 'root'HeroService
+
+                                            Ensuite, pour obtenir les données fictives du héros, ajoutez une getHeroes()méthode qui renvoie les héros à partir de mock.heroes.ts.</p>
+                                        <a class="btn btn-primary" href="blogPost.html">En savoir plus</a>
+                                   </div><!---End second column of Article-->
+                               </div>
+                            </article><!--end article.list-group-item-->
+                            <article class="list-group-item list-group-item-action">
+                               <div class="row">
+                                   <div class="col12 col-md-4">
+                                       <img src="/assets/images/architecture.png" class="img-fluid img-thumbnail" alt="">
+                                   </div>
+                                   <div class="col12 col-md-8">
+                                       <h1 class="h3">Utilisation des routes</h1>
+                                        <p>Ce didacticiel décrit comment vous pouvez créer une application d'une seule page, SPA, qui utilise plusieurs routes angulaires.
+
+                                            Dans un SPA, toutes les fonctions de votre application existent dans une seule page HTML. Lorsque les utilisateurs accèdent aux fonctionnalités de votre application, le navigateur doit restituer uniquement les parties qui comptent pour l'utilisateur, au lieu de charger une nouvelle page. Ce modèle peut améliorer considérablement l'expérience utilisateur de votre application.
+                                            
+                                            Pour définir la façon dont les utilisateurs naviguent dans votre application, vous utilisez des itinéraires. Vous pouvez ajouter des itinéraires pour définir la manière dont les utilisateurs naviguent d'une partie de votre application à une autre. Vous pouvez également configurer des itinéraires pour vous protéger contre un comportement inattendu ou non autorisé.</p>
+                                        <a class="btn btn-primary" href="">En savoir plus</a>
+                                   </div><!---End second column of Article-->
+                               </div>
+                            </article><!--end article.list-group-item-->
+                        </div><!--End div.list-group-->
+                        <!--Begin Bottom pagination-->
+                        <nav>
+                           <ul class="pagination justify-content-center">
+                            <li class="page-item disabled"><a href="#" class="page-link">&laquo;</a></li>
+                            <li class="page-item active"><a href="#" class="page-link">1</a></li>
+                            <li class="page-item"><a href="#" class="page-link">2</a></li>
+                            <li class="page-item"><a href="#" class="page-link">3</a></li>
+                            <li class="page-item"><a href="#" class="page-link">&raquo;</a></li>
+                           </ul>
+                        </nav>
+                        <!--End Bottom pagination-->
+                    </div><!--End first column-->
+                    <div class="col-12 col-md-3">
+                        <section class="card">
+                            <div class="card-header bg-primary text-white">
+                                <h1 class="h5">Catégories</h1>
+                            </div><!--end .card-header-->
+                            <ul class="list-group">
+                                <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"><a href="#">Catégorie 1</a><span class="badge badge-pill badge-primary">2</span></li>
+                                <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"><a href="#">Catégorie 2</a><span class="badge badge-pill badge-primary">10</span></li>
+                                <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"><a href="#">Catégorie 3</a><span class="badge badge-pill badge-primary">6</span></li>
+                                <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"><a href="#">Catégorie 4</a><span class="badge badge-pill badge-primary">8</span></li>
+                                <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"><a href="#">Catégorie 5</a><span class="badge badge-pill badge-primary">23</span></li>
+                            </ul>
+                        </section><!--end Category section-->
+                    </div><!--End second column-->
+                </section><!--end section.row-->
+            </main><!--end main.container-fluid-->
+           
+           
+         </body>
+    </div>
+</ng-template>
+
+<!--====================================================================================================-->
+
+<!--====================================================================================================-->
+<ng-container *ngIf="myParametre == 4; then structure; else " >
+</ng-container>
+
+<ng-template #structure>
+    <div>
+        <h1 class="text-uppercase text-danger font-weight-bold text-center mt-4">notion sur les structures</h1>
+        <body style="padding-top:70px; padding-bottom: 70px;">
+            <main class="container-fluid mb-4" >
+                <section class="row my-4">
+                    <div class="col-12 col-md-9">
+                      <!--Begin Breadcrumb-->
+                       <nav>
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a [routerLink]="['/home']">Accueil</a></li>
+                                <li class="breadcrumb-item"><a [routerLink]="['/contact']">contact</a></li>
+                            </ol>
+                       </nav>
+                       <!--End Breadcrumb-->
+                       <!--Begin Top pagination-->
+                        <nav>
+                           <ul class="pagination justify-content-center">
+                            <li class="page-item disabled"><a href="#" class="page-link">&laquo;</a></li>
+                            <li class="page-item active"><a href="#" class="page-link">1</a></li>
+                            <li class="page-item"><a href="#" class="page-link">2</a></li>
+                            <li class="page-item"><a href="#" class="page-link">3</a></li>
+                            <li class="page-item"><a href="#" class="page-link">&raquo;</a></li>
+                           </ul>
+                        </nav>
+                        <!--End Top pagination-->
+                        <div class="list-group list-group-flush mb-3">
+                            <article class="list-group-item list-group-item-action">
+                               <div class="row">
+                                   <div class="col12 col-md-4">
+                                       <img src="/assets/images/architecture.png" class="img-fluid img-thumbnail" alt="arbre">
+                                   </div>
+                                   <div class="col12 col-md-8">
+                                       <h1 class="h3">structure de base</h1>
+                                        <p>L'architecture d'une application Angular repose sur certains concepts fondamentaux. Les blocs de construction de base du framework Angular sont des composants angulaires organisés en NgModules . Les NgModules rassemblent le code associé en ensembles fonctionnels; une application angulaire est définie par un ensemble de NgModules. Une application a toujours au moins un module racine qui permet le démarrage, et a généralement beaucoup plus de modules de fonctionnalités .
+
+                                            Les composants définissent des vues , qui sont des ensembles d'éléments d'écran parmi lesquels Angular peut choisir et modifier en fonction de la logique et des données de votre programme.
+                                            
+                                            Les composants utilisent des services , qui fournissent des fonctionnalités spécifiques non directement liées aux vues. Les fournisseurs de services peuvent être injectés dans les composants en tant que dépendances , ce qui rend votre code modulaire, réutilisable et efficace.
+                                            
+                                            Les modules, composants et services sont des classes qui utilisent des décorateurs . Ces décorateurs marquent leur type et fournissent des métadonnées qui indiquent à Angular comment les utiliser.
+                                            
+                                            Les métadonnées d'une classe de composant l'associent à un modèle qui définit une vue. Un modèle combine du HTML ordinaire avec des directives Angular et un balisage de liaison qui permettent à Angular de modifier le HTML avant de le rendre pour l'affichage.
+                                            
+                                            Les métadonnées d'une classe de service fournissent les informations dont Angular a besoin pour les rendre disponibles aux composants via l' injection de dépendances (DI) .
+                                            
+                                            Les composants d'une application définissent généralement de nombreuses vues, organisées de manière hiérarchique. Angular fournit le Routerservice pour vous aider à définir des chemins de navigation parmi les vues. Le routeur offre des capacités de navigation sophistiquées dans le navigateur..</p>
+                                        <a class="btn btn-primary" href="">En savoir plus</a>
+                                   </div><!---End second column of Article-->
+                               </div>
+                            </article><!--end article.list-group-item-->
+                            <article class="list-group-item list-group-item-action">
+                               <div class="row">
+                                   <div class="col12 col-md-4">
+                                       <img src="/assets/images/StructdispoFichiers.jpg" class="img-fluid img-thumbnail" alt="">
+                                   </div>
+                                   <div class="col12 col-md-8">
+                                       <h1 class="h3">Composant</h1>
+                                        <p>Chaque application Angular a au moins un composant, le composant racine qui connecte une hiérarchie de composants avec le modèle d'objet de document de page (DOM). Chaque composant définit une classe qui contient des données d'application et une logique, et est associée à un modèle HTML qui définit une vue à afficher dans un environnement cible.
+
+                                            Le décorateur identifie la classe immédiatement en dessous comme un composant et fournit le modèle et les métadonnées spécifiques au composant associé.@Component()</p>
+                                        <a class="btn btn-primary" href="blogPost.html">En savoir plus</a>
+                                   </div><!---End second column of Article-->
+                               </div>
+                            </article><!--end article.list-group-item-->
+                            <article class="list-group-item list-group-item-action">
+                               <div class="row">
+                                   <div class="col12 col-md-4">
+                                       <img src="/assets/images/structFichiers.jpg" class="img-fluid img-thumbnail" alt="Chalet">
+                                   </div>
+                                   <div class="col12 col-md-8">
+                                       <h1 class="h3">Les concepts</h1>
+                                        <p>Angular est une plate-forme et un cadre pour la création d'applications clientes d'une seule page à l'aide de HTML et de TypeScript. Angular est écrit en TypeScript. Il implémente les fonctionnalités de base et facultatives sous la forme d'un ensemble de bibliothèques TypeScript que vous importez dans vos applications.
+
+                                            L'architecture d'une application Angular repose sur certains concepts fondamentaux. Les blocs de construction de base du framework Angular sont des composants angulaires organisés en NgModules . Les NgModules rassemblent le code associé en ensembles fonctionnels; une application angulaire est définie par un ensemble de NgModules. Une application a toujours au moins un module racine qui permet le démarrage, et a généralement beaucoup plus de modules de fonctionnalités .
+                                            
+                                            Les composants définissent des vues , qui sont des ensembles d'éléments d'écran parmi lesquels Angular peut choisir et modifier en fonction de la logique et des données de votre programme.
+                                            
+                                            Les composants utilisent des services , qui fournissent des fonctionnalités spécifiques non directement liées aux vues. Les fournisseurs de services peuvent être injectés dans les composants en tant que dépendances , ce qui rend votre code modulaire, réutilisable et efficace.</p>
+                                        <a class="btn btn-primary" href="blogPost.html">En savoir plus</a>
+                                   </div><!---End second column of Article-->
+                               </div>
+                            </article><!--end article.list-group-item-->
+                            <article class="list-group-item list-group-item-action">
+                               <div class="row">
+                                   <div class="col12 col-md-4">
+                                       <img src="/assets/images/structureMain.png" class="img-fluid img-thumbnail" alt="Rivière">
+                                   </div>
+                                   <div class="col12 col-md-8">
+                                       <h1 class="h3">Lorem ipsum dolor sit amet.</h1>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae repellat, id soluta fugit exercitationem accusamus perspiciatis sit iste aliquam quam quidem sunt earum. Esse rem illum, deleniti laborum cumque? Totam, ex. Facilis perferendis consequuntur veniam ratione, voluptas, dolorum sit. Ea beatae cumque illo numquam aliquam quisquam nostrum dolores, voluptate sequi placeat quasi eveniet alias recusandae modi. Commodi placeat beatae minus.</p>
+                                        <a class="btn btn-primary" href="blogPost.html">En savoir plus</a>
+                                   </div><!---End second column of Article-->
+                               </div>
+                            </article><!--end article.list-group-item-->
+                            <article class="list-group-item list-group-item-action">
+                               <div class="row">
+                                   <div class="col12 col-md-4">
+                                       <img src="/assets/images/structurerouting.png" class="img-fluid img-thumbnail" alt="Soirée">
+                                   </div>
+                                   <div class="col12 col-md-8">
+                                       <h1 class="h3">Lorem ipsum dolor sit amet.</h1>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae repellat, id soluta fugit exercitationem accusamus perspiciatis sit iste aliquam quam quidem sunt earum. Esse rem illum, deleniti laborum cumque? Totam, ex. Facilis perferendis consequuntur veniam ratione, voluptas, dolorum sit. Ea beatae cumque illo numquam aliquam quisquam nostrum dolores, voluptate sequi placeat quasi eveniet alias recusandae modi. Commodi placeat beatae minus.</p>
+                                        <a class="btn btn-primary" href="blogPost.html">En savoir plus</a>
+                                   </div><!---End second column of Article-->
+                               </div>
+                            </article><!--end article.list-group-item-->
+                        </div><!--End div.list-group-->
+                        <!--Begin Bottom pagination-->
+                        <nav>
+                           <ul class="pagination justify-content-center">
+                            <li class="page-item disabled"><a href="#" class="page-link">&laquo;</a></li>
+                            <li class="page-item active"><a href="#" class="page-link">1</a></li>
+                            <li class="page-item"><a href="#" class="page-link">2</a></li>
+                            <li class="page-item"><a href="#" class="page-link">3</a></li>
+                            <li class="page-item"><a href="#" class="page-link">&raquo;</a></li>
+                           </ul>
+                        </nav>
+                        <!--End Bottom pagination-->
+                    </div><!--End first column-->
+                    <div class="col-12 col-md-3">
+                        <section class="card">
+                            <div class="card-header bg-primary text-white">
+                                <h1 class="h5">Catégories</h1>
+                            </div><!--end .card-header-->
+                            <ul class="list-group">
+                                <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"><a href="#">Catégorie 1</a><span class="badge badge-pill badge-primary">2</span></li>
+                                <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"><a href="#">Catégorie 2</a><span class="badge badge-pill badge-primary">10</span></li>
+                                <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"><a href="#">Catégorie 3</a><span class="badge badge-pill badge-primary">6</span></li>
+                                <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"><a href="#">Catégorie 4</a><span class="badge badge-pill badge-primary">8</span></li>
+                                <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"><a href="#">Catégorie 5</a><span class="badge badge-pill badge-primary">23</span></li>
+                            </ul>
+                        </section><!--end Category section-->
+                    </div><!--End second column-->
+                </section><!--end section.row-->
+            </main><!--end main.container-fluid-->
+           
+           
+         </body>
+    </div>
+</ng-template>
+
+
